@@ -1,0 +1,45 @@
+{
+  "name": "mf-ecommerce",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install-all": "npm install",
+    "dev:products": "npm run dev --workspace=products",
+    "dev:cart": "npm run dev --workspace=cart",
+    "dev:container": "npm run dev --workspace=container",
+    "build:products": "npm run build --workspace=products",
+    "build:cart": "npm run build --workspace=cart",
+    "build:container": "npm run build --workspace=container",
+    "dev:all": "npm run dev:products & npm run dev:cart & npm run dev:container"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "private": true,
+  "workspaces": [
+    "container",
+    "products",
+    "cart"
+  ],
+  "devDependencies": {
+    "@rspack/cli": "^1.5.8",
+    "@rspack/core": "^1.5.8",
+    "@types/node": "^24.9.1",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "css-loader": "^7.1.2",
+    "html-rspack-plugin": "^6.1.3",
+    "style-loader": "^4.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@module-federation/bridge-react": "^0.21.1",
+    "@module-federation/enhanced": "^0.21.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-router-dom": "^7.9.4"
+  }
+}
